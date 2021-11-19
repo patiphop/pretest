@@ -1,0 +1,17 @@
+<div class="parent">
+
+  <div class=" flex-item col1">
+    <input type="number" [(ngModel)]="textInput" (change)="onValueChanged()" (keyup)="onValueChanged()">
+  </div>
+
+  <div class=" flex-item col2">
+    <select [(ngModel)]="optionSelected" (change)="onValueChanged()">
+      <option value="{{ item}}" *ngFor="let item of options"> {{ item }} </option>
+    </select>
+  </div>
+
+  <div class=" flex-item col3">
+    {{ result }}
+  </div>
+
+</div>
